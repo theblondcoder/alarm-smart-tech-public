@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Fire Detection System</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+
+<body>
+
+  <main class="dashboard">
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+      <div>
+
+        <p class="eyebrow">
+          SMART SAFETY SYSTEM
+        </p>
+
+        <h1>
+          Fire Detection Dashboard
+        </h1>
+
+        <p class="subtitle">
+          Real-time monitoring from ESP32
+        </p>
+
+      </div>
+
+
+      <div
+        id="connection-badge"
+        class="connection-badge disconnected"
+      >
+
+        <span class="connection-dot"></span>
+
+        <span id="connection-status">
+          WAITING
+        </span>
+
+      </div>
+
+    </header>
+
+
+    <!-- MAIN STATUS -->
+
+    <section class="main-status-grid">
+
+      <article
+        id="system-card"
+        class="status-card"
+      >
+
+        <div class="card-label">
+          System
+        </div>
+
+        <div class="status-content">
+
+          <div
+            id="system-icon"
+            class="status-icon"
+          >
+            ●
+          </div>
+
+          <div>
+
+            <div
+              id="system-status"
+              class="status-value"
+            >
+              UNKNOWN
+            </div>
+
+            <div class="status-description">
+              Alarm operating mode
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article
+        id="state-card"
+        class="status-card state-unknown"
+      >
+
+        <div class="card-label">
+          Alarm state
+        </div>
+
+        <div class="status-content">
+
+          <div
+            id="state-icon"
+            class="status-icon"
+          >
+            ●
+          </div>
+
+          <div>
+
+            <div
+              id="alarm-state"
+              class="status-value"
+            >
+              UNKNOWN
+            </div>
+
+            <div
+              id="state-description"
+              class="status-description"
+            >
+              Waiting for sensor data
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- SENSOR VALUES -->
+
+    <section class="sensor-grid">
+
+      <article class="sensor-card">
+
+        <div class="sensor-header">
+
+          <span class="sensor-name">
+            Temperature
+          </span>
+
+          <span class="sensor-symbol">
+            °C
+          </span>
+
+        </div>
+
+        <div class="sensor-value">
+
+          <span id="temperature">
+            --
+          </span>
+
+          <small>
+            °C
+          </small>
+
+        </div>
+
+        <div class="sensor-footer">
+          DHT11 temperature
+        </div>
+
+      </article>
+
+
+      <article class="sensor-card">
+
+        <div class="sensor-header">
+
+          <span class="sensor-name">
+            Humidity
+          </span>
+
+          <span class="sensor-symbol">
+            %
+          </span>
+
+        </div>
+
+        <div class="sensor-value">
+
+          <span id="humidity">
+            --
+          </span>
+
+          <small>
+            %
+          </small>
+
+        </div>
+
+        <div class="sensor-footer">
+          DHT11 humidity
+        </div>
+
+      </article>
+
+
+      <article class="sensor-card">
+
+        <div class="sensor-header">
+
+          <span class="sensor-name">
+            Smoke / Gas
+          </span>
+
+          <span class="sensor-symbol">
+            MQ
+          </span>
+
+        </div>
+
+        <div class="sensor-value">
+
+          <span id="smoke">
+            --
+          </span>
+
+        </div>
+
+        <div class="sensor-footer">
+          MQ sensor level
+        </div>
+
+      </article>
+
+
+      <article class="sensor-card">
+
+        <div class="sensor-header">
+
+          <span class="sensor-name">
+            Flame
+          </span>
+
+          <span class="sensor-symbol">
+            IR
+          </span>
+
+        </div>
+
+        <div class="sensor-value">
+
+          <span id="flame">
+            --
+          </span>
+
+        </div>
+
+        <div class="sensor-footer">
+          KY-026 flame sensor
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- LAST UPDATE -->
+
+    <section class="footer-panel">
+
+      <div>
+
+        <span class="footer-label">
+          Last update
+        </span>
+
+        <strong id="last-update">
+          --
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <span class="footer-label">
+          Data source
+        </span>
+
+        <strong>
+          ESP32 → Raspberry Pi
+        </strong>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- STATE CHANGE OVERLAY -->
+
+  <div
+    id="state-overlay"
+    class="state-overlay"
+  >
+
+    <div
+      id="overlay-content"
+      class="overlay-content"
+    >
+
+      <div
+        id="overlay-icon"
+        class="overlay-icon"
+      >
+        !
+      </div>
+
+      <div>
+
+        <div
+          id="overlay-title"
+          class="overlay-title"
+        >
+          State changed
+        </div>
+
+        <div
+          id="overlay-text"
+          class="overlay-text"
+        >
+          System status updated
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

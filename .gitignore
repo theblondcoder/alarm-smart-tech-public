@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Environment variables / secrets
+.env
+/arduino-code/secrets.h
+
+# Logs
+*.log
