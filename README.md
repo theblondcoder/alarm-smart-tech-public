@@ -32,7 +32,7 @@ This project combines an autonomous ESP32 fire-detection prototype with a Raspbe
 
 [![Fire Detection Dashboard showing the system running, a normal alarm state and sensor readings](docs/screenshots/fire-detection-dashboard-enhanced.png)](docs/screenshots/fire-detection-dashboard-enhanced.png)
 
-*AI-enhanced version of a project screenshot for readability. The displayed sensor readings are a captured snapshot, not live telemetry.*
+*Dashboard snapshot. The displayed sensor readings are captured values, not live telemetry.*
 
 ## Physical Prototype
 
