@@ -13,6 +13,8 @@
   <p>
     <a href="#overview">Overview</a> ·
     <a href="#dashboard-preview">Dashboard preview</a> ·
+    <a href="#physical-prototype">Physical prototype</a> ·
+    <a href="#project-report">Project report</a> ·
     <a href="#architecture">Architecture</a> ·
     <a href="#hardware">Hardware</a> ·
     <a href="#getting-started">Getting started</a> ·
@@ -31,6 +33,22 @@ This project combines an autonomous ESP32 fire-detection prototype with a Raspbe
 [![Fire Detection Dashboard showing the system running, a normal alarm state and sensor readings](docs/screenshots/fire-detection-dashboard-enhanced.png)](docs/screenshots/fire-detection-dashboard-enhanced.png)
 
 *AI-enhanced version of a project screenshot for readability. The displayed sensor readings are a captured snapshot, not live telemetry.*
+
+## Physical Prototype
+
+<p align="center">
+  <a href="docs/images/alarm-prototype.jpeg">
+    <img src="docs/images/alarm-prototype.jpeg" alt="Physical ESP32 alarm prototype on a breadboard with sensors, an LCD and an illuminated RGB LED module" width="420" />
+  </a>
+</p>
+
+The physical breadboard prototype brings together the ESP32, sensors, LCD, RGB status lighting and local alarm circuitry. This is an educational prototype, not a certified fire-safety device.
+
+## Project Report
+
+**[Read the Project Delivery Report (PDF, 11 pages)](docs/reports/Smart_Fire_Detection_Delivery_Report.pdf)**
+
+The report explains the project objectives, hardware, modular firmware, Raspberry Pi dashboard, network architecture, security controls, testing, design decisions and remaining limitations.
 
 ## At A Glance
 
