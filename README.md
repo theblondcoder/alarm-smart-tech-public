@@ -12,6 +12,7 @@
   </p>
   <p>
     <a href="#overview">Overview</a> ·
+    <a href="#dashboard-preview">Dashboard preview</a> ·
     <a href="#architecture">Architecture</a> ·
     <a href="#hardware">Hardware</a> ·
     <a href="#getting-started">Getting started</a> ·
@@ -24,6 +25,12 @@
 This project combines an autonomous ESP32 fire-detection prototype with a Raspberry Pi monitoring server. The ESP32 reads temperature, humidity, smoke/gas, and flame sensors, evaluates alarm states locally, and drives an LCD, RGB LEDs, and a buzzer. It sends telemetry to the Raspberry Pi over HTTPS; a browser dashboard displays the latest readings and connection state.
 
 > **Prototype only:** this project is educational and is not a certified fire alarm or life-safety device. Its sensor thresholds require calibration. Do not rely on it for fire protection.
+
+## Dashboard Preview
+
+[![Fire Detection Dashboard showing the system running, a normal alarm state and sensor readings](docs/screenshots/fire-detection-dashboard-enhanced.png)](docs/screenshots/fire-detection-dashboard-enhanced.png)
+
+*AI-enhanced version of a project screenshot for readability. The displayed sensor readings are a captured snapshot, not live telemetry.*
 
 ## At A Glance
 
